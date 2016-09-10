@@ -16,9 +16,14 @@ It has been tested on macOS (`netcat`) and CentOS Linux 6 & 7 (`nc`).
 
 ### Installation
 
-Clone this repo to your preferred directory (eg: /opt/nodetalking)
+1. Clone this repo to your preferred directory (eg: /opt/nodetalking)
 
   `git clone https://github.com/curtis86/nodetalking`
+
+2. Set your netcat binary name in `includes/nodetalking_vars.sh` (`NC_BIN_NAME`)
+
+ * Linux: `nc`
+ * macOS: `netcat`
 
 
 ### Usage
