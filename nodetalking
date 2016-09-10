@@ -18,14 +18,22 @@ source "${INCLUDES_DIR}/nodetalking_functions.sh"
 # MAIN
 main() {
   
+  # Sets up files, etc if this is our first run
   nt::setup
+
+  # Checks if script is already locked
   nt::check_lock
+
+  # Locks the script
   nt::lock
 
+  # Checks that the host file isn't empty
   nt::check_hosts_file
 
+  # Checks defined hosts
   nt::check_hosts
 
+  # Unlocks script
   nt::unlock
 }
 
