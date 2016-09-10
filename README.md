@@ -12,7 +12,7 @@ Paranoid that a restricted **host/port** is open to the public? Then `nodetalkin
 
 `nodetalking` can be run from any system that meets the above dependencies and runs a modern version of BASH (3.2+).
 
-It has been tested on macOS and CentOS Linux 6 & 7.
+It has been tested on macOS (`netcat`) and CentOS Linux 6 & 7 (`nc`).
 
 ### Installation
 
