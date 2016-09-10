@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+#
+# nodetalking
+
+# BASH MODES
+set -u
+set -o pipefail
+
+# CONSTANTS
+readonly HOME_DIR="$( cd "$( dirname $0 )" ; pwd )"
+readonly INCLUDES_DIR="${HOME_DIR}/includes"
+
+# INCLUDES
+source "${INCLUDES_DIR}/bp.sh"
+source "${INCLUDES_DIR}/nodetalking_vars.sh"
+source "${INCLUDES_DIR}/nodetalking_functions.sh"
+
+# MAIN
+main() {
+  
+  nt::setup
+  nt::check_lock
+  nt::lock
+
+  nt::check_hosts_file
+
+  nt::check_hosts
+
+  nt::unlock
+}
+
+main $@
