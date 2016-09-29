@@ -12,18 +12,13 @@ Paranoid that a restricted **host/port** is open to the public? Then `nodetalkin
 
 `nodetalking` can be run from any system that meets the above dependencies and runs a modern version of BASH (3.2+).
 
-It has been tested on macOS (`netcat`) and CentOS Linux 6 & 7 (`nc`).
+It has been tested on macOS and CentOS Linux 6 & 7.
 
 ### Installation
 
 1. Clone this repo to your preferred directory (eg: /opt/nodetalking)
 
   `git clone https://github.com/curtis86/nodetalking`
-
-2. Set your netcat binary name in `includes/nodetalking_vars.sh` (`NC_BIN_NAME`)
-
- * Linux: `nc`
- * macOS: `netcat`
 
 
 ### Usage

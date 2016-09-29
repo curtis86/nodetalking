@@ -74,7 +74,7 @@ nt::check_port() {
 
   [ -n "$( echo "${port}" | tr -d [:digit:] )" ] && nt::abrt "nt::check_port: ${port} is not a valid port"
 
-  if ${NC_BIN_NAME} -w ${CHECK_TIMEOUT} -z "${host}" ${port} >/dev/null 2>&1 ; then
+  if ncat -w ${CHECK_TIMEOUT} "${host}" ${port} < /dev/null >/dev/null 2>&1 ; then
     return 0
   else
     return 1
